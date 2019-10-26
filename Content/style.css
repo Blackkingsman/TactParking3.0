@@ -28,11 +28,24 @@
 .password-input{
     margin-top: auto;
     margin-left:auto;
-    margin-bottom: auto;
+    margin-bottom: 10px;
     margin-right:30px;
 }
 .label1{
     margin-right: 2px;
+}
+#Username{
+    color:white;
+}
+#Password{
+    color:white;
+}
+#login-page{
+    color: white;
+    font-size:65px;
+    text-align:center;
+    background-color:#000000;
+    opacity: .8;
 }
 .email-input {
     margin-top: auto;

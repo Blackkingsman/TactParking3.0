@@ -11,7 +11,7 @@
 </head>
 <body>
 
-    <div class="jumbotron">Login Page</div>
+    <div class="jumbotron" id="login-page">Login Page</div>
     <div class="modal-dialog text-center">
         <div class="col-sm-9 main-section">
             <div class="modal-content">
@@ -27,7 +27,7 @@
            </div>
         <div class="form-inline" id="form-group-password">
         <asp:Label  Cssclass="label1 " for="TextBox2" ID="Password" runat="server" >Password </asp:Label> 
-        <asp:TextBox ID="TextBox2" runat="server" placeholder="Enter Password" CssClass="password-input form-control"></asp:TextBox>
+        <asp:TextBox ID="TextBox2" runat="server" placeholder="Enter Password" CssClass="password-input form-control" TextMode="Password"></asp:TextBox>
         </div>
         <p>
             <asp:Button type="submit" class="btn btn-success" ID="Button1" runat="server" OnClick="Button1_Click" Text="login" />
