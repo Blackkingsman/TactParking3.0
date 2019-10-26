@@ -10,8 +10,8 @@
     <link href="Content/style.css" rel="stylesheet" />
 </head>
 <body>
-<!--forks-->
-    
+
+    <div class="jumbotron"></div>
     <div class="modal-dialog text-center">
         <div class="col-sm-9 main-section">
             <div class="modal-content">
