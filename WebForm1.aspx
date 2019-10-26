@@ -11,7 +11,7 @@
 </head>
 <body>
 
-    <div class="jumbotron"></div>
+    <div class="jumbotron">Login Page</div>
     <div class="modal-dialog text-center">
         <div class="col-sm-9 main-section">
             <div class="modal-content">
