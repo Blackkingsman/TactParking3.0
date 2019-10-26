@@ -1,0 +1,46 @@
+﻿body {
+    font-family: 'Times New Roman', sans-serif;
+     background-image: url('../Images/BackgroundPage.jpg');
+     background-size: cover;
+}
+.main-section {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+.modal-content{
+    background-color: #000000;
+    opacity: .8;
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+
+    
+}
+.form-group{
+    display: grid;
+    grid-template-columns: 40px 200px;
+    
+}
+.password-input{
+    margin-top: auto;
+    margin-left:auto;
+    margin-bottom: auto;
+    margin-right:30px;
+}
+.label1{
+    margin-right: 2px;
+}
+.email-input {
+    margin-top: auto;
+    margin-left: auto;
+    margin-bottom: auto;
+    margin-right: 31px;
+}
+#user-information-email
+{
+    position:center;
+}
