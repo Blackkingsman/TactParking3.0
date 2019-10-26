@@ -10,7 +10,7 @@
     <link href="Content/style.css" rel="stylesheet" />
 </head>
 <body>
-    <!--hello how are you-->
+    <!--hello how are -->
     <div class="jumbotron">Login Page</div>
     
     <div class="modal-dialog text-center">
