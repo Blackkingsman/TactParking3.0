@@ -13,6 +13,7 @@
 
     <div class="jumbotron" id="login-page">Login Page</div>
     <div class="modal-dialog text-center">
+        <asp:Label ID="Label1" runat="server" Text="Failed Login" Visible="False"></asp:Label>
         <div class="col-sm-9 main-section">
             <div class="modal-content">
                 <div class="col-11 user-img">
