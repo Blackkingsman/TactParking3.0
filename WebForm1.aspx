@@ -13,6 +13,7 @@
 
     <div class="jumbotron" id="login-page">Login Page</div>
     <div class="modal-dialog text-center">
+     
         <div class="col-sm-9 main-section">
             <div class="modal-content">
                 <div class="col-11 user-img">
@@ -31,6 +32,10 @@
         </div>
         <p>
             <asp:Button type="submit" class="btn btn-success" ID="Button1" runat="server" OnClick="Button1_Click" Text="login" />
+        </p>
+        <p>
+               <asp:Label ID="Label1" runat="server" Text="Failed Login" Visible="False" Font-Bold="True" Font-Size="Large" ForeColor="#CC0000"></asp:Label>
+
         </p>
         </div>
     </form>
