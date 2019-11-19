@@ -150,6 +150,8 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Content\Site.css" />
     <Content Include="Images\BackgroundPage.jpg" />
+    <Content Include="Images\LookUpMapSample.jpg" />
+    <Content Include="Images\Screenshot %2879%29.png" />
     <Content Include="Images\user-image-.png" />
     <Content Include="Images\user.jpg" />
     <Content Include="Scripts\bootstrap.js" />

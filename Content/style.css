@@ -57,3 +57,21 @@
 {
     position:center;
 }
+#Image1 {
+    position: fixed;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+#DropDownList1{
+    position: fixed;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+#btnReserve {
+    position: fixed;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}

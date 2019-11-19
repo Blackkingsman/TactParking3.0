@@ -26,16 +26,16 @@ namespace TactParking3._0
             DataTable dt = new DataTable();
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             da.Fill(dt);
-
+            con.Close();
            foreach(DataRow dr in dt.Rows)
             {
                 Session["USER_ID"] = TextBox1.Text;
-                Response.Redirect("WebForm2.aspx");
+                Response.Redirect("WebForm2.aspx?Userid="+TextBox1.Text);
             }
             
            Label1.Visible=true;
 
-            con.Close();
+            
         }
     }
 }
