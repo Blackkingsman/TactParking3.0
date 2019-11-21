@@ -47,7 +47,7 @@
         </ul>
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-                <a class="nav-item btn btn-danger rounded " role="button" href="WebForm1.aspx">Logout</a>
+                <a class="nav-item btn btn-danger rounded " role="button" href="Logout.aspx">Logout</a>
             </li>
 
         </ul>
