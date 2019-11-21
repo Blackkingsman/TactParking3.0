@@ -30,7 +30,7 @@ namespace TactParking3._0
            foreach(DataRow dr in dt.Rows)
             {
                 Session["USER_ID"] = TextBox1.Text;
-                Response.Redirect("WebForm2.aspx?Userid="+TextBox1.Text);
+                Response.Redirect("WebForm2.aspx");
             }
             
            Label1.Visible=true;
