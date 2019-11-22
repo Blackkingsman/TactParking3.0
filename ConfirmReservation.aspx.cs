@@ -16,7 +16,7 @@ namespace TactParking3._0
             if(Session["PID"] != null)
             {
                 pid = Session["PID"].ToString();
-                Label1.Text = pid;
+               // Label1.Text = pid;
             }
             if (Session["USER_ID"] != null)
             {
