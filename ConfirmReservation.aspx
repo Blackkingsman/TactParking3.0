@@ -28,6 +28,13 @@
 
        
                
+        .auto-style2 {
+            left: 84%;
+            top: 71%;
+        }
+
+       
+               
     </style>
 </head>
 <body>
@@ -54,8 +61,8 @@
        
     </nav>
     <form id="form1" runat="server" class="auto-style1">
-         <asp:Image ID="Image1" runat="server" Height="410px" ImageUrl="~/Images/LookUpMapSample.jpg" Width="690px" />
-          <asp:DropDownList runat="server" ID="DropDownList1"></asp:DropDownList>
+         <asp:Image ID="Image1" runat="server" Height="410px" Width="690px" />
+          <asp:DropDownList runat="server" ID="DropDownList1" CssClass="auto-style2"></asp:DropDownList>
     </form>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

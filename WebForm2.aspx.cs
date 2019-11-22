@@ -29,6 +29,7 @@ namespace TactParking3._0
 
         {
             Session["PID"] = DropDownList1.SelectedValue.ToString();
+            Session["DayValue"] = DropDownList2.SelectedValue;
             Response.Redirect("ConfirmReservation.aspx");
            
 
