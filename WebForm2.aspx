@@ -52,22 +52,31 @@
 
         </ul>
     </nav>
-    <form id="form1" runat="server" class="auto-style1">
-        <div class="container">
+    <form id="form1wb2" runat="server" >
+       
 
-
+           
+        
+        
+        <div class="text-center">
+            <asp:Image ID="Image1" runat="server" Height="550px" ImageUrl="~/Images/LookUpMapSample.jpg" Width="900px" />
+        </div>
+        <div class="text-center">
+            <asp:DropDownList ID="DropDownList2" runat="server" CssClass="dropbtn">
+                <asp:ListItem Value="1">Today</asp:ListItem>
+                <asp:ListItem Value="2">Tommorrow</asp:ListItem>
+            </asp:DropDownList>
+       
+        
             <asp:DropDownList ID="DropDownList1" CssClass="dropbtn" runat="server" DataSourceID="SqlDataSource1" DataTextField="PID" DataValueField="PID">
             </asp:DropDownList>
-
-            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:TactParkingDbConnectionString %>" SelectCommand="SELECT * FROM [ParkingSpots] where occupied =0 ORDER BY len([PID]), [PID] "></asp:SqlDataSource>
         </div>
-        <asp:Button ID="btnReserve" runat="server" CssClass="button1" Height="65px" OnClick="btnReserve_Click" Text="Reserve" Width="163px" />
-        <asp:Image ID="Image1" runat="server" Height="410px" ImageUrl="~/Images/LookUpMapSample.jpg" Width="690px" />
-        <asp:Label ID="Label1" runat="server" Text="Label" Width="80px"></asp:Label>
-        <asp:DropDownList ID="DropDownList2" runat="server">
-            <asp:ListItem Value="1">Today</asp:ListItem>
-            <asp:ListItem Value="2">Tommorrow</asp:ListItem>
-        </asp:DropDownList>
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:TactParkingDbConnectionString %>" SelectCommand="SELECT * FROM [ParkingSpots] where occupied =0 ORDER BY len([PID]), [PID] "></asp:SqlDataSource>
+        <div class="text-center">
+            <asp:Button ID="btnReserve" runat="server" CssClass="button1" Height="65px" OnClick="btnReserve_Click" Text="Continue >>" Width="163px" />
+        </div>
+        
+        
     </form>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

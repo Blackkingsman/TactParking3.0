@@ -60,11 +60,14 @@
         </ul>
        
     </nav>
-    <form id="form1" runat="server" class="auto-style1">
-         <asp:Image ID="Image1" runat="server" Height="410px" Width="690px" />
-          <asp:DropDownList runat="server" ID="DropDownList1" CssClass="auto-style2"></asp:DropDownList>
-    </form>
+    <div id="parent">
+        <form id="form1" runat="server" class="auto-style1">
+            <asp:Image ID="Image1" runat="server" Height="410px" Width="690px" />
+            <asp:Button ID="btnReserve" runat="server" CssClass="button1" Height="65px" Text="Book Reservation" Width="163px" />
 
+            <asp:DropDownList runat="server" ID="DropDownList1" CssClass="auto-style2"></asp:DropDownList>
+        </form>
+    </div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
