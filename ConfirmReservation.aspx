@@ -63,7 +63,7 @@
     <div id="parent">
         <form id="form1" runat="server" class="auto-style1">
             <asp:Image ID="Image1" runat="server" Height="410px" Width="690px" />
-            <asp:Button ID="btnReserve" runat="server" CssClass="button1" Height="65px" Text="Book Reservation" Width="163px" />
+            <asp:Button ID="btnReserve" runat="server" CssClass="button1" Height="65px" Text="Book Reservation" Width="163px" OnClick="btnReserve_Click" />
 
             <asp:DropDownList runat="server" ID="DropDownList1" CssClass="auto-style2"></asp:DropDownList>
         </form>

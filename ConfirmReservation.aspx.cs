@@ -70,5 +70,10 @@ namespace TactParking3._0
             //    response.redirect("https://maps.google.com/?q=" + longitude + "," + latitude);
             //}
         }
+
+        protected void btnReserve_Click(object sender, EventArgs e)
+        {
+            SqlCommand command = new SqlCommand("update HourParkinSpot set reserved ='1', user_id="+userid+"where pid="+pid+"and hour_id="+DropDownList1.SelectedValue, connection);
+        }
     }
 }
