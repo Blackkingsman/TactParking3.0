@@ -9,13 +9,13 @@ using System.Data.SqlClient;
 namespace TactParking3._0
 {
     public partial class WebForm2 : System.Web.UI.Page
-    { string userid;
+    { string Userid;
         protected void Page_Load(object sender, EventArgs e)
         {
            
             if(Session["USER_ID"] != null)
             {
-                userid = Request.QueryString["UserId"];
+               Userid = Request.QueryString["USER_ID"];
             }
             else
             {
@@ -30,6 +30,7 @@ namespace TactParking3._0
         {
             Session["PID"] = DropDownList1.SelectedValue.ToString();
             Session["DayValue"] = DropDownList2.SelectedValue;
+           // Session["USER_ID"] = Userid;
             Response.Redirect("ConfirmReservation.aspx");
            
 
