@@ -89,11 +89,13 @@ namespace TactParking3._0
 
         protected void btnReserve_Click(object sender, EventArgs e)
         {
-            int hourid =Int32.Parse( DropDownList1.SelectedValue);
-            Label1.Text = hourid.ToString();
-            SqlCommand command = new SqlCommand("update HourParkingSpot set reserved ='1', userid='" + userid + "'where pid='" + pid + "'and hour_id=" + hourid + " and day_id='"+DaySelected+"'", connection);
+            
+
+            Label1.Text = DropDownList1.SelectedValue;
+            SqlCommand command = new SqlCommand("update HourParkingSpot set reserved ='1', userid='" + userid + "'where pid='" + pid + "'and hour_id='" + DropDownList1.SelectedValue + "' and day_id='"+DaySelected+"' where reserved = '0'", connection);
             command.ExecuteNonQuery();
-           // Response.Redirect("ConfirmReservation.aspx");
+
+            Response.Redirect(Request.RawUrl);
         }
     }
 }
