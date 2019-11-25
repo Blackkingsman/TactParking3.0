@@ -92,7 +92,7 @@ namespace TactParking3._0
             
 
             Label1.Text = DropDownList1.SelectedValue;
-            SqlCommand command = new SqlCommand("update HourParkingSpot set reserved ='1', userid='" + userid + "'where pid='" + pid + "'and hour_id='" + DropDownList1.SelectedValue + "' and day_id='"+DaySelected+"' where reserved = '0'", connection);
+            SqlCommand command = new SqlCommand("update HourParkingSpot set reserved ='1', userid='" + userid + "'where pid='" + pid + "'and hour_id='" + DropDownList1.SelectedValue + "' and day_id='"+DaySelected+"' and reserved = '0'", connection);
             command.ExecuteNonQuery();
 
             Response.Redirect(Request.RawUrl);
