@@ -45,7 +45,8 @@
                 <asp:BoundField DataField="pid" HeaderText="pid" SortExpression="pid"></asp:BoundField>
                 <asp:BoundField DataField="timerange" HeaderText="timerange" SortExpression="timerange"></asp:BoundField>
                 <asp:BoundField DataField="userid" HeaderText="userid" SortExpression="userid"></asp:BoundField>
-                <asp:CommandField HeaderText="Cancel" ShowDeleteButton="True" ShowHeader="True"></asp:CommandField>
+                <asp:CommandField DeleteText="Cancel" HeaderText="Cancel" ShowDeleteButton="True" ShowHeader="True"></asp:CommandField>
+                <asp:CommandField ButtonType="Button" HeaderText="Update" ShowEditButton="True" ShowHeader="True"></asp:CommandField>
             </Columns>
         </asp:GridView>
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:TactParkingDbConnectionString %>" SelectCommand="SELECT [pid], [timerange], [userid] FROM [HourParkingSpot] WHERE ([userid] = @userid)">
