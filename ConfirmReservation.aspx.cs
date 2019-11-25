@@ -22,22 +22,22 @@ namespace TactParking3._0
                // Label1.Text = pid;
             }
             if (Session["DayValue"] != null) DaySelected = Session["DayValue"].ToString();
-            if (pid == "1") Image1.ImageUrl = Page.ResolveUrl("~/Images/1.jpg");
-            if (pid == "2") Image1.ImageUrl = Page.ResolveUrl("~/Images/2.jpg");
-            if (pid == "3") Image1.ImageUrl = Page.ResolveUrl("~/Images/3.jpg");
-            if (pid == "4") Image1.ImageUrl = Page.ResolveUrl("~/Images/4.jpg");
-            if (pid == "5") Image1.ImageUrl = Page.ResolveUrl("~/Images/5.jpg");
-            if (pid == "6") Image1.ImageUrl = Page.ResolveUrl("~/Images/6.jpg");
-            if (pid == "7") Image1.ImageUrl = Page.ResolveUrl("~/Images/7.jpg");
-            if (pid == "8") Image1.ImageUrl = Page.ResolveUrl("~/Images/8.jpg");
-            if (pid == "9") Image1.ImageUrl = Page.ResolveUrl("~/Images/9.jpg");
-            if (pid == "10") Image1.ImageUrl = Page.ResolveUrl("~/Images/10.jpg");
-            if (pid == "11") Image1.ImageUrl = Page.ResolveUrl("~/Images/11.jpg");
-            if (pid == "12") Image1.ImageUrl = Page.ResolveUrl("~/Images/12.jpg");
-            if (pid == "13") Image1.ImageUrl = Page.ResolveUrl("~/Images/13.jpg");
-            if (pid == "14") Image1.ImageUrl = Page.ResolveUrl("~/Images/14.jpg");
-            if (pid == "15") Image1.ImageUrl = Page.ResolveUrl("~/Images/15.jpg");
-            if (pid == "16") Image1.ImageUrl = Page.ResolveUrl("~/Images/16.jpg");
+            if (pid == "1") Image1.ImageUrl = Page.ResolveUrl("~/Images2/1.jpg");
+            if (pid == "2") Image1.ImageUrl = Page.ResolveUrl("~/Images2/2.jpg");
+            if (pid == "3") Image1.ImageUrl = Page.ResolveUrl("~/Images2/3.jpg");
+            if (pid == "4") Image1.ImageUrl = Page.ResolveUrl("~/Images2/4.jpg");
+            if (pid == "5") Image1.ImageUrl = Page.ResolveUrl("~/Images2/5.jpg");
+            if (pid == "6") Image1.ImageUrl = Page.ResolveUrl("~/Images2/6.jpg");
+            if (pid == "7") Image1.ImageUrl = Page.ResolveUrl("~/Images2/7.jpg");
+            if (pid == "8") Image1.ImageUrl = Page.ResolveUrl("~/Images2/8.jpg");
+            if (pid == "9") Image1.ImageUrl = Page.ResolveUrl("~/Images2/9.jpg");
+            if (pid == "10") Image1.ImageUrl = Page.ResolveUrl("~/Images2/10.jpg");
+            if (pid == "11") Image1.ImageUrl = Page.ResolveUrl("~/Images2/11.jpg");
+            if (pid == "12") Image1.ImageUrl = Page.ResolveUrl("~/Images2/12.jpg");
+            if (pid == "13") Image1.ImageUrl = Page.ResolveUrl("~/Images2/13.jpg");
+            if (pid == "14") Image1.ImageUrl = Page.ResolveUrl("~/Images2/14.jpg");
+            if (pid == "15") Image1.ImageUrl = Page.ResolveUrl("~/Images2/15.jpg");
+            if (pid == "16") Image1.ImageUrl = Page.ResolveUrl("~/Images2/16.jpg");
             if (Session["USER_ID"] != null)
             {
 
