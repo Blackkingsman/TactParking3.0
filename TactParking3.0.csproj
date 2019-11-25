@@ -148,6 +148,7 @@
     </Compile>
     <Compile Include="Logout.aspx.cs">
       <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Logout.aspx.designer.cs">
       <DependentUpon>Logout.aspx</DependentUpon>
@@ -169,14 +170,30 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Content\Site.css" />
-    <Content Include="Images\1152px-University_of_Central_Oklahoma_logo.svg.png" />
-    <Content Include="Images\BackgroundPage.jpg" />
-    <Content Include="Images\LookUpMapSample.jpg" />
-    <Content Include="Images\ParkingSpot1.png" />
-    <Content Include="Images\ParkingSpot2.png" />
-    <Content Include="Images\Screenshot %2879%29.png" />
-    <Content Include="Images\user-image-.png" />
-    <Content Include="Images\user.jpg" />
+    <Content Include="Images2\1.jpg" />
+    <Content Include="Images2\10.jpg" />
+    <Content Include="Images2\11.jpg" />
+    <Content Include="Images2\1152px-University_of_Central_Oklahoma_logo.svg.png" />
+    <Content Include="Images2\12.jpg" />
+    <Content Include="Images2\13.jpg" />
+    <Content Include="Images2\14.jpg" />
+    <Content Include="Images2\15.jpg" />
+    <Content Include="Images2\16.jpg" />
+    <Content Include="Images2\2.jpg" />
+    <Content Include="Images2\3.jpg" />
+    <Content Include="Images2\4.jpg" />
+    <Content Include="Images2\5.jpg" />
+    <Content Include="Images2\6.jpg" />
+    <Content Include="Images2\7.jpg" />
+    <Content Include="Images2\8.jpg" />
+    <Content Include="Images2\9.jpg" />
+    <Content Include="Images2\BackgroundPage.jpg" />
+    <Content Include="Images2\LookUpMapSample.jpg" />
+    <Content Include="Images2\ParkingSpot1.png" />
+    <Content Include="Images2\ParkingSpot2.png" />
+    <Content Include="Images2\Screenshot %2879%29.png" />
+    <Content Include="Images2\user-image-.png" />
+    <Content Include="Images2\user.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="SpotUtilit.aspx" />

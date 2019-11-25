@@ -22,11 +22,26 @@ namespace TactParking3._0
                // Label1.Text = pid;
             }
             if (Session["DayValue"] != null) DaySelected = Session["DayValue"].ToString();
-            if (pid == "1") Image1.ImageUrl = Page.ResolveUrl("~/Images/ParkingSpot1.png");
+            if (pid == "1") Image1.ImageUrl = Page.ResolveUrl("~/Images/1.jpg");
+            if (pid == "2") Image1.ImageUrl = Page.ResolveUrl("~/Images/2.jpg");
+            if (pid == "3") Image1.ImageUrl = Page.ResolveUrl("~/Images/3.jpg");
+            if (pid == "4") Image1.ImageUrl = Page.ResolveUrl("~/Images/4.jpg");
+            if (pid == "5") Image1.ImageUrl = Page.ResolveUrl("~/Images/5.jpg");
+            if (pid == "6") Image1.ImageUrl = Page.ResolveUrl("~/Images/6.jpg");
+            if (pid == "7") Image1.ImageUrl = Page.ResolveUrl("~/Images/7.jpg");
+            if (pid == "8") Image1.ImageUrl = Page.ResolveUrl("~/Images/8.jpg");
+            if (pid == "9") Image1.ImageUrl = Page.ResolveUrl("~/Images/9.jpg");
+            if (pid == "10") Image1.ImageUrl = Page.ResolveUrl("~/Images/10.jpg");
+            if (pid == "11") Image1.ImageUrl = Page.ResolveUrl("~/Images/11.jpg");
+            if (pid == "12") Image1.ImageUrl = Page.ResolveUrl("~/Images/12.jpg");
+            if (pid == "13") Image1.ImageUrl = Page.ResolveUrl("~/Images/13.jpg");
+            if (pid == "14") Image1.ImageUrl = Page.ResolveUrl("~/Images/14.jpg");
+            if (pid == "15") Image1.ImageUrl = Page.ResolveUrl("~/Images/15.jpg");
+            if (pid == "16") Image1.ImageUrl = Page.ResolveUrl("~/Images/16.jpg");
             if (Session["USER_ID"] != null)
             {
-               
-                userid = Request.QueryString["UserId"];
+
+                userid = Session["USER_ID"].ToString();
                 
             }
             else
@@ -37,14 +52,15 @@ namespace TactParking3._0
             
            
                
-                System.Data.DataTable subjects = new System.Data.DataTable();
-                SqlDataAdapter adapter = new SqlDataAdapter("select hour_id,timerange from HourParkingSpot where pid ="+pid+" and reserved =0 and day_id="+DaySelected, connection);
-                adapter.Fill(subjects);
+                //system.data.datatable subjects = new system.data.datatable();
+                //sqldataadapter adapter = new sqldataadapter("select * from hourparkingspot where pid ="+pid+" and reserved =0 and day_id="+dayselected, connection);
+                //adapter.fill(subjects);
 
-                DropDownList1.DataSource = subjects;
-                DropDownList1.DataTextField = "timerange";
-                DropDownList1.DataValueField = "hour_id";
-                DropDownList1.DataBind();
+                //dropdownlist1.datasource = subjects;
+             
+                //dropdownlist1.datatextfield = "timerange";
+                //dropdownlist1.datavaluefield = "hour_id";
+                //dropdownlist1.databind();
             
            
 
@@ -73,7 +89,13 @@ namespace TactParking3._0
 
         protected void btnReserve_Click(object sender, EventArgs e)
         {
-            SqlCommand command = new SqlCommand("update HourParkinSpot set reserved ='1', user_id="+userid+"where pid="+pid+"and hour_id="+DropDownList1.SelectedValue, connection);
+            
+
+            Label1.Text = DropDownList1.SelectedValue;
+            SqlCommand command = new SqlCommand("update HourParkingSpot set reserved ='1', userid='" + userid + "'where pid='" + pid + "'and hour_id='" + DropDownList1.SelectedValue + "' and day_id='"+DaySelected+"' where reserved = '0'", connection);
+            command.ExecuteNonQuery();
+
+            Response.Redirect(Request.RawUrl);
         }
     }
 }
