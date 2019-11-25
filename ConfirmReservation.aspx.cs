@@ -52,15 +52,15 @@ namespace TactParking3._0
             
            
                
-                System.Data.DataTable subjects = new System.Data.DataTable();
-                SqlDataAdapter adapter = new SqlDataAdapter("select * from HourParkingSpot where pid ="+pid+" and reserved =0 and day_id="+DaySelected, connection);
-                adapter.Fill(subjects);
+                //system.data.datatable subjects = new system.data.datatable();
+                //sqldataadapter adapter = new sqldataadapter("select * from hourparkingspot where pid ="+pid+" and reserved =0 and day_id="+dayselected, connection);
+                //adapter.fill(subjects);
 
-                DropDownList1.DataSource = subjects;
+                //dropdownlist1.datasource = subjects;
              
-                DropDownList1.DataTextField = "timerange";
-                DropDownList1.DataValueField = "hour_id";
-                DropDownList1.DataBind();
+                //dropdownlist1.datatextfield = "timerange";
+                //dropdownlist1.datavaluefield = "hour_id";
+                //dropdownlist1.databind();
             
            
 

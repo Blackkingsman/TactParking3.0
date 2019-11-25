@@ -66,12 +66,12 @@
             <asp:Image ID="Image1" runat="server" Height="410px" Width="690px" />
             <asp:Button ID="btnReserve" runat="server" CssClass="button1" Height="65px" Text="Book Reservation" Width="163px" OnClick="btnReserve_Click" />
 
-            <asp:DropDownList runat="server" ID="DropDownList1" CssClass="auto-style2" DataSourceID="SqlDataSource1" DataTextField="timerange" DataValueField="timerange"></asp:DropDownList>
-            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:TactParkingDbConnectionString %>" SelectCommand="SELECT [timerange], [hour_id] FROM [HourParkingSpot] WHERE (([pid] = @pid) AND ([reserved] = @reserved) AND ([day_id] = @day_id))">
+            <asp:DropDownList runat="server" ID="DropDownList1" CssClass="auto-style2" DataSourceID="SqlDataSource1" DataTextField="timerange" DataValueField="hour_id"></asp:DropDownList>
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:TactParkingDbConnectionString %>" SelectCommand="SELECT * FROM [HourParkingSpot] WHERE (([pid] = @pid) AND ([reserved] = @reserved) AND ([day_id] = @day_id))">
                 <SelectParameters>
                     <asp:SessionParameter Name="pid" SessionField="PID" Type="Int32" />
                     <asp:Parameter DefaultValue="0" Name="reserved" Type="String" />
-                    <asp:SessionParameter Name="day_id" SessionField="DayValue" Type="Int32" />
+                    <asp:SessionParameter Name="day_id" SessionField="DayID" Type="Int32" />
                 </SelectParameters>
             </asp:SqlDataSource>
         </form>
