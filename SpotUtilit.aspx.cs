@@ -22,5 +22,10 @@ namespace TactParking3._0
             }
 
         }
+
+        protected void GridView1_RowUpdating(object sender, GridViewUpdateEventArgs e)
+        {
+
+        }
     }
 }

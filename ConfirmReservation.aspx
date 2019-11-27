@@ -60,14 +60,20 @@
         </ul>
        
     </nav>
-    <div id="parent">
-        <form id="form1" runat="server" class="auto-style1">
-            <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
-            <asp:Image ID="Image1" runat="server" Height="410px" Width="690px" />
-            <asp:Button ID="btnReserve" runat="server" CssClass="button1" Height="65px" Text="Book Reservation" Width="163px" OnClick="btnReserve_Click" />
-
-            <asp:DropDownList runat="server" ID="DropDownList1" CssClass="auto-style2" DataSourceID="SqlDataSource1" DataTextField="timerange" DataValueField="hour_id"></asp:DropDownList>
-            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:TactParkingDbConnectionString %>" SelectCommand="SELECT * FROM [HourParkingSpot] WHERE (([pid] = @pid) AND ([reserved] = @reserved) AND ([day_id] = @day_id2))">
+    
+        <form id="form1wb2" runat="server">
+            
+            <div class="text-center">
+                <asp:Image ID="Image1" runat="server" Height="410px" Width="690px" />
+            </div>
+             <div class ="text-center">
+                <asp:DropDownList runat="server" ID="DropDownList1" CssClass="auto-style2" DataSourceID="SqlDataSource1" DataTextField="timerange" DataValueField="hour_id"></asp:DropDownList>
+            </div>
+            <div class="text-center">
+                <asp:Button ID="btnReserve" runat="server" CssClass="button1" Height="65px" Text="Book Reservation" Width="163px" OnClick="btnReserve_Click" />
+            </div>
+           
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:TactParkingDbConnectionString %>" SelectCommand="SELECT * FROM [HourParkingSpot2] WHERE (([pid] = @pid) AND ([reserved] = @reserved) AND ([day_id] = @day_id2))">
                 <SelectParameters>
                     <asp:SessionParameter Name="pid" SessionField="PID" Type="Int32" />
                     <asp:Parameter DefaultValue="0" Name="reserved" Type="String" />
@@ -75,7 +81,7 @@
                 </SelectParameters>
             </asp:SqlDataSource>
         </form>
-    </div>
+    
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>

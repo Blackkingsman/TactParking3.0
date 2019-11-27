@@ -10,10 +10,15 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
     <link href="Content/style.css" rel="stylesheet" />
+    <style type="text/css">
+        .auto-style1 {
+            margin-bottom: 0px;
+        }
+    </style>
 </head>
 <body>
     
-    <form id="form1" runat="server">
+   \
     
  <nav class="navbar navbar-expand-sm navbar-dark bg-dark rounded">
         <div id="uco-logo" class="logo-image">
@@ -40,20 +45,75 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
         <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
-        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" Height="220px" Width="376px">
-            <Columns>
-                <asp:BoundField DataField="pid" HeaderText="pid" SortExpression="pid"></asp:BoundField>
-                <asp:BoundField DataField="timerange" HeaderText="timerange" SortExpression="timerange"></asp:BoundField>
-                <asp:BoundField DataField="userid" HeaderText="userid" SortExpression="userid"></asp:BoundField>
-                <asp:CommandField DeleteText="Cancel" HeaderText="Cancel" ShowDeleteButton="True" ShowHeader="True"></asp:CommandField>
-                <asp:CommandField ButtonType="Button" HeaderText="Update" ShowEditButton="True" ShowHeader="True"></asp:CommandField>
-            </Columns>
-        </asp:GridView>
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:TactParkingDbConnectionString %>" SelectCommand="SELECT [pid], [timerange], [userid] FROM [HourParkingSpot] WHERE ([userid] = @userid)">
-            <SelectParameters>
+    <form id="form1" runat="server">
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:TactParkingDbConnectionString %>" SelectCommand="SELECT * FROM [HourParkingSpot2] WHERE (([reserved] = @reserved) AND ([userid] = @userid))" DeleteCommand="DELETE FROM [HourParkingSpot2] WHERE [pid] = @pid AND [day_id] = @day_id AND [hour_id] = @hour_id" InsertCommand="INSERT INTO [HourParkingSpot2] ([pid], [occupied], [day_id], [hour_id], [reserved], [userid], [timerange]) VALUES (@pid, @occupied, @day_id, @hour_id, @reserved, @userid, @timerange)" UpdateCommand="UPDATE [HourParkingSpot2] SET [occupied] = @occupied, [reserved] = @reserved, [userid] = @userid, [timerange] = @timerange WHERE [pid] = @pid AND [day_id] = @day_id AND [hour_id] = @hour_id">
+            <DeleteParameters>
+                <asp:Parameter Name="pid" Type="Int32" />
+                <asp:Parameter Name="day_id" Type="Int32" />
+                <asp:Parameter Name="hour_id" Type="Int32" />
+            </DeleteParameters>
+            <InsertParameters>
+                <asp:Parameter Name="pid" Type="Int32" />
+                <asp:Parameter Name="occupied" Type="Int32" />
+                <asp:Parameter Name="day_id" Type="Int32" />
+                <asp:Parameter Name="hour_id" Type="Int32" />
+                <asp:Parameter Name="reserved" Type="String" />
+                <asp:Parameter Name="userid" Type="String" />
+                <asp:Parameter Name="timerange" Type="String" />
+            </InsertParameters>
+            <selectparameters>
+                <asp:Parameter DefaultValue="1" Name="reserved" Type="String" />
                 <asp:SessionParameter Name="userid" SessionField="USER_ID" Type="String" />
-            </SelectParameters>
+            </selectparameters>
+            <UpdateParameters>
+                <asp:Parameter Name="occupied" Type="Int32" />
+                <asp:Parameter Name="reserved" Type="String" />
+                <asp:Parameter Name="userid" Type="String" />
+                <asp:Parameter Name="timerange" Type="String" />
+                <asp:Parameter Name="pid" Type="Int32" />
+                <asp:Parameter Name="day_id" Type="Int32" />
+                <asp:Parameter Name="hour_id" Type="Int32" />
+            </UpdateParameters>
         </asp:SqlDataSource>
+        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellPadding="3" CellSpacing="2" CssClass="auto-style1" DataSourceID="SqlDataSource1">
+            <Columns>
+                <asp:CommandField ShowEditButton="True"></asp:CommandField>
+                <asp:TemplateField HeaderText="pid" SortExpression="pid">
+                    <EditItemTemplate>
+                        <asp:Label ID="Label4" runat="server" Text='<%# Eval("pid") %>'></asp:Label>
+                    </EditItemTemplate>
+                    <ItemTemplate>
+                        <asp:Label ID="Label5" runat="server" Text='<%# Bind("pid") %>'></asp:Label>
+                    </ItemTemplate>
+                </asp:TemplateField>
+                <asp:TemplateField HeaderText="timerange" SortExpression="timerange">
+                    <EditItemTemplate>
+                        <asp:TextBox ID="TextBox2" runat="server" Text='<%# Bind("timerange") %>'></asp:TextBox>
+                    </EditItemTemplate>
+                    <ItemTemplate>
+                        <asp:Label ID="Label3" runat="server" Text='<%# Bind("timerange") %>'></asp:Label>
+                    </ItemTemplate>
+                </asp:TemplateField>
+                <asp:TemplateField HeaderText="userid" SortExpression="userid">
+                    <EditItemTemplate>
+                        <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("userid") %>'></asp:TextBox>
+                    </EditItemTemplate>
+                    <ItemTemplate>
+                        <asp:Label ID="Label2" runat="server" Text='<%# Bind("userid") %>'></asp:Label>
+                    </ItemTemplate>
+                </asp:TemplateField>
+                
+            </Columns>
+            <FooterStyle BackColor="#F7DFB5" ForeColor="#8C4510" />
+            <HeaderStyle BackColor="#A55129" Font-Bold="True" ForeColor="White" />
+            <PagerStyle ForeColor="#8C4510" HorizontalAlign="Center" />
+            <RowStyle BackColor="#FFF7E7" ForeColor="#8C4510" />
+            <SelectedRowStyle BackColor="#738A9C" Font-Bold="True" ForeColor="White" />
+            <sortedascendingcellstyle backcolor="#FFF1D4" />
+            <sortedascendingheaderstyle backcolor="#B95C30" />
+            <sorteddescendingcellstyle backcolor="#F1E5CE" />
+            <sorteddescendingheaderstyle backcolor="#93451F" />
+        </asp:GridView>
     </form>
 </body>
 </html>
