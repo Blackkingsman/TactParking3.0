@@ -52,6 +52,7 @@
                 <a class="nav-link"  href="SpotUtilit.aspx">Reservations</a>
             </li>
         </ul>
+        <ul class="d-flex justify-content-between "> <li class="nav-item"> <a class="nav-item">Confirm Reservation</a></li></ul>
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
                 <a class="nav-item btn btn-danger rounded " role="button" href="Logout.aspx">Logout</a>
