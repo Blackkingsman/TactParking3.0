@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+
 using System.Data.SqlClient;
 namespace TactParking3._0
 {
@@ -12,10 +13,11 @@ namespace TactParking3._0
         String userid;
         String pid;
         String DaySelected;
+      
         SqlConnection connection = new SqlConnection("Server=tcp:tactparking.database.windows.net,1433;Initial Catalog=TactParkingDb;Persist Security Info=False;User ID=TACTParking;Password=Admintact*;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+          
             if(Session["PID"] != null)
             {
                 pid = Session["PID"].ToString();
@@ -46,6 +48,7 @@ namespace TactParking3._0
             }
             else
             {
+               
                 Response.Redirect("Webform1.aspx");
             }
             connection.Open();
@@ -95,7 +98,22 @@ namespace TactParking3._0
             SqlCommand command = new SqlCommand("update HourParkingSpot2 set reserved ='1', userid='" + userid + "'where pid='" + pid + "'and hour_id='" + DropDownList1.SelectedValue + "' and day_id='"+DaySelected+"' and reserved = '0'", connection);
             command.ExecuteNonQuery();
 
+
+        
             Response.Redirect(Request.RawUrl);
+        }
+
+        protected void Button1_Click1(object sender, EventArgs e)
+        {
+            SqlCommand getlong = new SqlCommand("select longitude from parkingspots where pid=" + pid, connection);
+            SqlCommand getlat = new SqlCommand("select latitude from parkingspots where pid=" + pid, connection);
+            var reader = getlong.ExecuteScalar();
+            var readlat = getlat.ExecuteScalar();
+
+            string longitude = reader.ToString();
+            string latitude = readlat.ToString();
+
+            Response.Redirect("https://maps.google.com/?q=" + longitude + "," + latitude);
         }
     }
 }

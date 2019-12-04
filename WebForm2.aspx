@@ -59,7 +59,7 @@
         
         
         <div class="text-center">
-            <asp:Image ID="Image1" runat="server" Height="550px" ImageUrl="~/Images/LookUpMapSample.jpg" Width="900px" />
+            <asp:Image ID="Image1" runat="server" Height="550px" ImageUrl="~\Images2\LookUpMapSample.bmp" Width="900px" />
         </div>
         <div class="text-center">
             <asp:DropDownList ID="DropDownList2" runat="server" CssClass="dropbtn">

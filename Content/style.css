@@ -120,7 +120,6 @@
 }
 
 */
-
 /*#dropdownlist1{
     position: fixed;
     top: 85%;
@@ -128,5 +127,8 @@
     transform: translate(-50%,-50%);
 }*/
 #btnReserve {
-  text-align:center;
+    text-align: center;
+    display: block;
+    display: inline-block;
+
 }
