@@ -74,10 +74,7 @@
                 <asp:Button ID="btnReserve" runat="server" CssClass="button1" Height="65px" Text="Book Reservation" Width="185px" OnClick="btnReserve_Click" />
                  <asp:Button ID="Button1" runat="server" CssClass="button1" Height="65px" Text="Get Directions" Width="163px" OnClick="Button1_Click1"/>
             </div>
-            <div class="text-center">
-                <asp:Label ID="Label1" runat="server" Text="Successfully Booked!!" Visible="False" Font-Bold="True" ForeColor="#00CC00" Height="70px"></asp:Label>
-
-            </div>
+         
            
             <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:TactParkingDbConnectionString %>" SelectCommand="SELECT * FROM [HourParkingSpot2] WHERE (([pid] = @pid) AND ([reserved] = @reserved) AND ([day_id] = @day_id2))">
                 <SelectParameters>
